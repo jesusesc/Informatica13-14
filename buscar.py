@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+'''
+Diversas funciones para manejar listas
+'''
+
 def buscar(valor, lista):
     '''
     Busca el elemento 'valor' en la lista.
@@ -18,16 +22,23 @@ def buscar(valor, lista):
 
 # creación de una lista aleatoria
 def random_list(size):
-    #Creo una lista aleatoria
+    '''
+    Creo una lista aleatoria de enteros de tamaño size
+    '''
     from random import randint
     # randint(a, b) devuelve un entero aleatorio N, 
     #a <= N <= b
     data = []
-    for i in range(size):
-        data.append(randint(-10,10))
+    i = 0
+    while i < size:
+        data.append(randint(-10, 10))
+        i += 1
     return data 
     
 def main():
+    '''
+    Programa de prueba
+    '''
     from random import randint    
     lista = random_list(20)
     print lista
